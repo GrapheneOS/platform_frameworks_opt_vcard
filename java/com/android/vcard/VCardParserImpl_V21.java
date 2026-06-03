@@ -768,6 +768,7 @@ import java.util.Set;
             // remove "transport-padding"
             int pos = firstString.length() - 1;
             while (firstString.charAt(pos) != '=') {
+                pos--;
             }
             StringBuilder builder = new StringBuilder();
             builder.append(firstString.substring(0, pos + 1));
@@ -782,6 +783,7 @@ import java.util.Set;
                     // remove "transport-padding"
                     pos = line.length() - 1;
                     while (line.charAt(pos) != '=') {
+                        pos--;
                     }
                     builder.append(line.substring(0, pos + 1));
                     builder.append("\r\n");
